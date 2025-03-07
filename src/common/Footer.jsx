@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "/logo-white.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,9 +19,15 @@ const Footer = () => {
         <div className="flex flex-col gap-5 h-[60%]">
           <h1 className="text-[16px] font-semibold font-bitter">Quick Links</h1>
           <div className="flex flex-col gap-2 text-[14px]">
-            <p className="hover:underline cursor-pointer">Home</p>
-            <p className="hover:underline cursor-pointer">About Us</p>
-            <p className="hover:underline cursor-pointer">Gallery</p>
+            <Link to="/" className="hover:underline cursor-pointer">
+              Home
+            </Link>
+            <Link to="/about" className="hover:underline cursor-pointer">
+              About Us
+            </Link>
+            <Link to="/gallery" className="hover:underline cursor-pointer">
+              Gallery
+            </Link>
           </div>
         </div>
       </div>
@@ -30,9 +37,18 @@ const Footer = () => {
             Customer Support
           </h1>
           <div className="flex flex-col gap-2 text-[14px]">
-            <p className="hover:underline cursor-pointer">FAQ</p>
-            <p className="hover:underline cursor-pointer">Warranty</p>
-            <p className="hover:underline cursor-pointer">Contact</p>
+            <Link to="/#faq" className="hover:underline cursor-pointer">
+              FAQ
+            </Link>
+            <Link
+              to="/about/#warranty"
+              className="hover:underline cursor-pointer"
+            >
+              Warranty
+            </Link>
+            <Link to="/contact" className="hover:underline cursor-pointer">
+              Contact
+            </Link>
           </div>
         </div>
       </div>
@@ -42,10 +58,18 @@ const Footer = () => {
             Connect with Us
           </h1>
           <div className="flex flex-col gap-2 text-[14px]">
-            <p className="hover:underline cursor-pointer">Facebook</p>
-            <p className="hover:underline cursor-pointer">Instagram</p>
-            <p className="hover:underline cursor-pointer">Twitter</p>
-            <p className="hover:underline cursor-pointer">LinkedIn</p>
+            <Link to="" className="hover:underline cursor-pointer">
+              Facebook
+            </Link>
+            <Link to="" className="hover:underline cursor-pointer">
+              Instagram
+            </Link>
+            <Link to="" className="hover:underline cursor-pointer">
+              Twitter
+            </Link>
+            <Link to="" className="hover:underline cursor-pointer">
+              LinkedIn
+            </Link>
           </div>
         </div>
       </div>

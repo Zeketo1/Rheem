@@ -1,5 +1,6 @@
 import React from "react";
 import air from "../assets/air-conditioning.png";
+import { Link } from "react-router-dom";
 
 const Afford = () => {
   return (
@@ -16,9 +17,9 @@ const Afford = () => {
           AirComfort Series – reliable, energy-efficient, and affordable air
           conditioning for every home and office, 24/7.
         </p>
-        <button className="relative text-[14px] bg-white py-2 px-8 rounded-full text-black">
+        <Link to="/gallery" className="relative text-[14px] bg-white py-2 px-8 rounded-full text-black">
           Shop now
-        </button>
+        </Link>
       </div>
     </div>
   );

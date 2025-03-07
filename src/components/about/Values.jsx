@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Values = () => {
   const values = [
@@ -20,8 +21,19 @@ const Values = () => {
     },
   ];
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
-    <div>
+    <div id="warranty">
       <h1 className="text-[22px] text-center font-bitter font-semibold">
         Core Values
       </h1>

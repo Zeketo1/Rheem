@@ -10,17 +10,13 @@ import { CartContext } from "@/components/context/CartContextProvider";
 import Afford from "@/common/Afford";
 import FAQ from "@/common/FAQ";
 import Footer from "@/common/Footer";
+import payment from "../assets/payment.png";
 
 const PrivateRoutes = () => {
   const { id } = useParams();
   const { addToCart, cartItems } = useContext(CartContext);
 
   const pageContent = featuresItems.find((item) => item.name == id);
-
-  const [size, setSize] = useState("M");
-  const [activeSize, setActiveSize] = useState(0);
-
-  const sizez = ["M", "L", "XL", "XXL"];
 
   const [quantity, setQuantity] = useState(1);
 
@@ -72,25 +68,7 @@ const PrivateRoutes = () => {
             <h1 className="font-semibold sm:text-[25px]">
               {pageContent?.name}
             </h1>
-            <p>${pageContent?.price}</p>
-            <div className="flex flex-col gap-2">
-              <p className="font-bold">
-                Size: <span className="font-semibold font-serif">{size}</span>
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {sizez.map((item, i) => (
-                  <div
-                    key={i}
-                    onClick={() => setActiveSize(i)}
-                    className={`${
-                      i == activeSize && "bg-black text-white"
-                    } cursor-pointer rounded-[4px] h-[30px] flex items-center justify-center w-[32px] border border-gray-700 shadow-md`}
-                  >
-                    <p>{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p><span className="font-semibold">Price</span> ${pageContent?.price}</p>
             <div className="flex flex-col sm:flex-row sm:items-end gap-5">
               <div className="flex flex-col gap-3">
                 <p>Quantity</p>
@@ -147,7 +125,7 @@ const PrivateRoutes = () => {
               </div>
             </div>
             <div className="flex flex-col shadow-xl items-center bg-[#F8F8F8] p-5 gap-3">
-              {/* <img src={payment} alt="" /> */}
+              <img src={payment} alt="" />
               <p className="font-semibold">Guarantee safe & secure checkout</p>
             </div>
           </div>

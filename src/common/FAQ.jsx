@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { faqItems } from "../utils/constant";
 import FAQItem from "../utils/FAQItem";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -21,9 +22,12 @@ const FAQ = () => {
           <br />
           services. If you have any other queries, feel free to contact us!
         </p>
-        <button className="relative w-fit text-[14px] bg-primary py-2 px-8 rounded-full text-white">
+        <Link
+          to="/gallery"
+          className="relative w-fit text-[14px] bg-primary py-2 px-8 rounded-full text-white"
+        >
           Shop now
-        </button>
+        </Link>
       </div>
       <section id="faqs" className="w-full h-full px-4 md:px-0">
         <div className="space-y-4">

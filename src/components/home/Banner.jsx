@@ -1,5 +1,6 @@
 import React from "react";
 import bannerImg from "../../assets/home/bannerImg.jpg";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -15,9 +16,9 @@ const Banner = () => {
           Discover Rheem{" "}
         </h1>
         <p>Elevating Your Comfort with Premium Air Conditioning</p>
-        <button className="w-fit mt-5 px-5 py-2 font-semibold text-white transition-all duration-300 bg-primary hover:bg-red-600 rounded-md">
+        <Link to="/gallery" className="w-fit mt-5 px-5 py-2 font-semibold text-white transition-all duration-300 bg-primary hover:bg-red-600 rounded-md">
           Shop Now
-        </button>
+        </Link>
       </div>
     </div>
   );

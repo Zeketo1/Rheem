@@ -1,5 +1,6 @@
 import React from "react";
 import { featuresItems } from "../../utils/constant";
+import { Link } from "react-router-dom";
 
 const Featured = () => {
   const featuresItemsFlitted = featuresItems.slice(0, 4);
@@ -10,7 +11,8 @@ const Featured = () => {
       </h1>
       <div className="grid grid-cols-4 gap-[20px] p-10">
         {featuresItemsFlitted.map(({ name, image, description, price }, i) => (
-          <div
+          <Link
+            to={`/gallery/${name}`}
             className="relative flex gap-4 flex-col bg-white shadow-lg rounded-lg p-3"
             key={i}
           >
@@ -26,7 +28,7 @@ const Featured = () => {
             <p className="absolute font-bitter rounded-bl-xl rounded-tr-lg top-0 right-0 py-3 px-5 bg-primary text-white font-semibold">
               ${price}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
