@@ -102,7 +102,7 @@ const Products = () => {
 
   return (
     <>
-      <div className="py-10">
+      <div className="py-20 lg:py-10">
         <h1 className="text-[30px] font-semibold font-bitter text-center">
           Products
         </h1>
@@ -110,7 +110,7 @@ const Products = () => {
           Filters
         </h3>
         <div className="fashion__products__grid sm:px-2 md:px-5 xl:px-20">
-          <div className="flex flex-col gap-4 filter__display">
+          <div className="flex flex-col pl-5 gap-4 filter__display">
             {/* <div className="flex flex-col gap-3">
                             <p>Color:</p>
                             <div className="flex flex-wrap gap-3 opacity-70">

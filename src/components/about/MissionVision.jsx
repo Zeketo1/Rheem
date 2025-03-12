@@ -6,8 +6,8 @@ import vision from "../../assets/about/vision.jpg";
 const MissionVision = () => {
   return (
     <div className="flex flex-col">
-      <div className="grid grid-cols-2 h-[400px] px-20 py-10">
-        <div className="flex h-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-[400px] px-20 py-10">
+        <div className="hidden lg:flex h-full">
           <img
             className="h-[200px] w-[200px] object-cover rounded-lg"
             src={mission1}
@@ -23,7 +23,7 @@ const MissionVision = () => {
         </div>
         <div>
           <p className="font-bitter text-[14px] font-semibold">-OUR MISSION</p>
-          <p className="mb-2 text-[38px] font-semibold">
+          <p className="mb-2 text-[30px] lg:text-[38px] font-semibold">
             Cooling Every Space, Comforting Every Home
           </p>
           <p className="text-[14px]">
@@ -34,10 +34,10 @@ const MissionVision = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 h-[400px] px-20 py-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-[400px] px-20 py-10">
         <div>
           <p className="font-bitter text-[14px] font-semibold">-OUR VISION</p>
-          <p className="mb-2 text-[38px] font-semibold">
+          <p className="mb-2 text-[30px] lg:text-[38px] font-semibold">
             A Future of Smart & Sustainable Cooling
           </p>
           <p className="text-[14px]">
@@ -47,7 +47,7 @@ const MissionVision = () => {
             efficiency, affordability, and long-term value.
           </p>
         </div>
-        <div className="flex justify-center h-full">
+        <div className="hidden lg:flex justify-center h-full">
           <img
             className="h-[300px] w-[80%] object-top object-cover rounded-lg"
             src={vision}

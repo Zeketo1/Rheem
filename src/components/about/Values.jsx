@@ -37,7 +37,7 @@ const Values = () => {
       <h1 className="text-[22px] text-center font-bitter font-semibold">
         Core Values
       </h1>
-      <div className="grid grid-cols-4 gap-5 px-20 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-20 py-10">
         {values.map((item, i) => (
           <div className="bg-slate-200 w-full p-4 rounded-lg" key={i}>
             <h1 className="text-[15px] mb-3 font-bitter font-semibold text-center">
@@ -51,7 +51,7 @@ const Values = () => {
         <h1 className="mb-4 text-[22px] text-center font-bitter font-semibold">
           Warranty & Peace of Mind
         </h1>
-        <p className="w-[50%]">
+        <p className="px-5 sm:px-10 md:px-20 lg:px-0 lg:w-[50%]">
           We stand by the quality of our air conditioners with
           manufacturer-backed warranties for your peace of mind. Each product
           comes with a specified warranty period, ensuring protection against

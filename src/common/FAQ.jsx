@@ -9,7 +9,7 @@ const FAQ = () => {
   const toggleFAQ = (index) => setOpenIndex(openIndex === index ? null : index);
 
   return (
-    <div className="grid grid-cols-2 justify-between my-20 px-20">
+    <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center w-full gap-10 lg:gap-0 px-5 justify-between my-20 lg:px-20">
       <div className="flex flex-col h-full justify-center">
         <h1 className="mb-4 text-[22px] font-bitter font-semibold">
           Frequently Asked Questions (FAQ)
@@ -29,7 +29,7 @@ const FAQ = () => {
           Shop now
         </Link>
       </div>
-      <section id="faqs" className="w-full h-full px-4 md:px-0">
+      <section id="faqs" className="w-full  h-full px-4 md:px-0">
         <div className="space-y-4">
           {faqItems.map((faq, i) => (
             <FAQItem

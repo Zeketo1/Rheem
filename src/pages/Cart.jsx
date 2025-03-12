@@ -52,7 +52,7 @@ const Cart = () => {
                 <div className="flex items-center justify-between w-full py-4 px-2 sm:p-4">
                   {/* <div className="flex items-center gap-5"> */}
                   <img
-                    className="h-[98px] w-[83px] sm:w-[92px] sm:h-[112px]"
+                    className="h-[98px] object-contain w-[83px] sm:w-[92px] sm:h-[112px]"
                     src={cartItem.image ? cartItem.image : cartItem.img}
                     alt=""
                   />

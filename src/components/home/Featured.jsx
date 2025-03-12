@@ -9,7 +9,7 @@ const Featured = () => {
       <h1 className="ml-20 text-[22px] font-bitter font-semibold">
         Featured Products
       </h1>
-      <div className="grid grid-cols-4 gap-[20px] p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] p-10">
         {featuresItemsFlitted.map(({ name, image, description, price }, i) => (
           <Link
             to={`/gallery/${name}`}

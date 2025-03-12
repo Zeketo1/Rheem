@@ -15,7 +15,7 @@ const Popular = () => {
         <br />
         our customers.
       </p>
-      <div className="grid grid-cols-4 gap-[20px] p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] p-10">
         {filteredfeaturesItems.map(({ name, image, description, price }, i) => (
           <Link
             to={`/gallery/${name}`}
