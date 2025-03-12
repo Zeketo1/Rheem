@@ -10,6 +10,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const navigate = useNavigate();
+
   const navOptions = [
     { title: 'Home', to: '/' },
     { title: 'About', to: '/about' },
@@ -41,7 +42,7 @@ const Navbar = () => {
           {navOptions.map((item, i) => (
             <Link
               key={i}
-              className="cursor-pointer hover:text-[#7985C7] transition-colors"
+              className={`${item.to === location.pathname && "underline" } cursor-pointer hover:text-[#7985C7] transition-colors`}
               to={item.to}
             >
               {item.title}
